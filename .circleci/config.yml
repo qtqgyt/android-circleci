@@ -26,7 +26,7 @@ jobs:
           command: mkdir ~/repo && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/repo/repo && chmod a+x ~/repo/repo
       - run:
           name: "init repo"
-          command: repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r61
+          command: ~/repo/repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r61
       - run:
           name: "sync"
           command: ~/repo/repo sync -j8
