@@ -23,7 +23,7 @@ jobs:
           command: sudo apt update && sudo apt install -y openjdk-8-jdk git gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip
       - run:
           name: "install repo"
-          command: mkdir ~/bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo && export PATH=~/bin:$PATH
+          command: mkdir ~/repo && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/repo/repo && chmod a+x ~/repo/repo && export PATH=~/repo:$PATH
       - run:
           name: "init repo"
           command: repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r61
